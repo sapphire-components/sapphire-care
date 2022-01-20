@@ -1,0 +1,47 @@
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+
+@keyframes loading {
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.is-loading {
+	background-image: $skeleton-color;
+	border: none;
+	border-radius: $border-radius-small;
+	color: transparent;
+	display: inline-flex;
+	margin-bottom: 5px;
+	overflow: hidden;
+	position: relative;
+
+	> * {
+		visibility: hidden;
+	}
+
+	.is-rtl & {
+		background-image: $skeleton-color-arabic;
+	}
+
+	img {
+		visibility: hidden;
+	}
+
+	&::after {
+		animation: loading 1.5s infinite;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		transform: translateX(-100%);
+		width: 100%;
+	}
+
+	+ .is-loading {
+		margin-top: 10px;
+	}
+}

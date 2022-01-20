@@ -1,0 +1,46 @@
+// Colors
+
+$regular-alpha: #00bfa5;
+$regular-beta: darken($regular-alpha, 4%);
+
+$sapphire-care-blue1: #0e4f7c;
+$sapphire-care-blue2: #255a80;
+
+$dark-blue: #194968;
+$dark-grey: #333333;
+$dark-orange: #c37b03;
+$dark-pink: #980263;
+$dark-red: #b10100;
+$dark-green: #578329;
+$dark-yellow: #c19323;
+
+$light-blue: #c4f0eb;
+$light-green: #c2dea8;
+$light-beige: #f5f4e0;
+$light-grey: #d6d6d6;
+$light-orange: #fcc891;
+$light-pink: #ca2c92;
+$light-red: #fad5d5;
+$light-yellow: #ffeab5;
+
+$body-grey: #f5f5f5;
+$mid-light-grey: #adadad;
+$mid-dark-grey: #5c5c5c;
+
+$sapphire-care-red: #fa5252;
+$sapphire-light: #ebebeb;
+$sapphire-white: #ffffff;
+
+$regular-red: #ff3e2d;
+$regular-white: #fff;
+$regular-yellow: #fbc02d;
+$regular-beige: #e6e2aa;
+$regular-black: #131819;
+$regular-blue: #039be5;
+$regular-grey: #858585;
+$regular-green: #7cb342;
+$regular-orange: #ffa000;
+$regular-pink: #c32b87;
+
+$skeleton-color: linear-gradient(to left, $light-grey, $sapphire-light);
+$skeleton-color-arabic: linear-gradient(to right, $light-grey, $sapphire-light);

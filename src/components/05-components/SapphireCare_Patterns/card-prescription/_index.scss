@@ -1,0 +1,53 @@
+// Card Prescription
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+$dimensions: 100px;
+
+.card-prescription {
+	align-items: center;
+	background-color: $sapphire-white;
+	border-radius: $border-radius-medium;
+	display: flex;
+	flex-direction: column;
+	height: $dimensions;
+	justify-content: center;
+	padding: $sapphire-sizes--medium;
+	text-align: left;
+
+	.is-rtl & {
+		text-align: right;
+	}
+
+	.card-prescription_title {
+		font-family: $latin-bold;
+		font-size: $font-size-heading4;
+		width: 100%;
+
+		.is-rtl & {
+			font-family: $arabic-bold;
+		}
+	}
+
+	.card-prescription__content {
+		align-items: center;
+		display: flex;
+		gap: $sapphire-sizes--small;
+		width: 100%;
+
+		.card-prescription__icon {
+			color: $regular-alpha;
+		}
+
+		.card-prescription__text {
+			font-family: $latin-bold;
+			font-size: $font-size-heading3;
+
+			.is-rtl & {
+				font-family: $arabic-bold;
+			}
+		}
+	}
+}

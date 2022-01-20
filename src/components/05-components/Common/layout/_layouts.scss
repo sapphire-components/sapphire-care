@@ -1,0 +1,22 @@
+@use '~Settings/colors'as *;
+
+
+
+
+.layout.blank.bg-colored .content {
+  background: $regular-alpha;
+  /*primary-color*/
+  color: $sapphire-white;
+}
+
+.layout.white-page .header {
+  background: $sapphire-white;
+  color: $regular-alpha;
+  /*primary-color*/
+}
+
+.layout.white-page .content,
+.layout.white-content .content,
+.layout.white-content .bottom {
+  background: $sapphire-white;
+}

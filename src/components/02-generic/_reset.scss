@@ -1,0 +1,21 @@
+@use '~Settings/colors'as *;
+@use '~Settings/fonts'as *;
+
+body,
+.content {
+  background: $sapphire-white;
+  color: $dark-grey;
+  font-family: $latin-regular;
+  font-size: 14px !important;
+  margin: 0 !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .is-rtl & {
+    font-family: $arabic-regular;
+  }
+}

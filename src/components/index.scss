@@ -1,0 +1,20 @@
+// @forward '00-settings';
+// @forward '01-tools';
+// @forward '02-generic';
+// @forward '03-elements';
+// @forward '04-base';
+// @forward '05-components';
+// @forward '06-helpers';
+// @forward '07-trumps';
+
+@use '~Settings'as settings;
+@use '~Tools'as tools;
+@use '~Generic'as generic;
+@use '~Elements'as elements;
+@use '~Base'as base;
+@use '~Components'as components;
+@use '~Helpers'as helpers;
+@use '~Trumps'as trumps;
+@use '~Adjusts'as adjusts;
+
+@use '~Legacy' as legacy;

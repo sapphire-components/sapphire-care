@@ -1,0 +1,12 @@
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+.doctor-list__separator {
+	font-family: $latin-bold;
+	font-size: $font-size-heading3;
+	margin: $sapphire-sizes--medium 0;
+
+	.is-rtl & {
+		font-family: $arabic-bold;
+	}
+}

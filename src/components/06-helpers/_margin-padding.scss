@@ -1,0 +1,47 @@
+@use '~Settings/sizes' as *;
+
+/* Margins */
+@each $size in $sapphire-sizes {
+	$label: nth($size, 1);
+	$value: nth($size, 2);
+
+	.margin-#{$label} {
+		margin: #{$value};
+	}
+}
+
+@each $size in $sapphire-sizes {
+	$label: nth($size, 1);
+	$value: nth($size, 2);
+
+	.margin-bottom-#{$label} {
+		margin-bottom: #{$value};
+	}
+
+	.margin-top-#{$label} {
+		margin-top: #{$value};
+	}
+}
+
+/* Paddings */
+@each $size in $sapphire-sizes {
+	$label: nth($size, 1);
+	$value: nth($size, 2);
+
+	.padding-#{$label} {
+		padding: #{$value};
+	}
+}
+
+@each $size in $sapphire-sizes {
+	$label: nth($size, 1);
+	$value: nth($size, 2);
+
+	.padding-bottom-#{$label} {
+		padding-bottom: #{$value};
+	}
+
+	.padding-top-#{$label} {
+		padding-top: #{$value};
+	}
+}

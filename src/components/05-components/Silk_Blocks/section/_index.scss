@@ -1,0 +1,64 @@
+/* Section */
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+.section {
+	padding: 0 $sapphire-sizes--medium;
+
+	.section-title {
+		background: transparent;
+		border: 0;
+		font-family: $latin-bold;
+		padding: 0;
+
+		.is-rtl & {
+			font-family: $arabic-bold;
+		}
+	}
+
+	.section-content {
+		padding: 0;
+
+		.sticky-header .section-title {
+			background-color: transparent;
+			padding-left: 30px;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.sticky-header {
+	z-index: 10;
+
+	.section-title {
+		background: $sapphire-white;
+		padding-left: 45px;
+		position: relative;
+
+		&:before {
+			background-color: $regular-orange;
+			bottom: 15px;
+			content: '';
+			left: 30px;
+			position: absolute;
+			top: 15px;
+			width: 2px;
+		}
+	}
+
+	.is-rtl & {
+		.section-title {
+			padding-left: 30px;
+			padding-right: 45px;
+
+			&:before {
+				left: initial;
+				right: 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+@use '~Settings/colors'as *;
+@use '~Settings/fonts'as *;
+
+.animated-label,
+.animated-label.active,
+.animated-label:focus {
+	margin-bottom: 15px;
+
+	.animated-label-text {
+		all: unset;
+		display: flex;
+		font-size: $font-size-normal;
+		margin-bottom: 7px;
+
+		.form-input__asterisk {
+			color: $regular-red;
+			margin-left: 5px;
+		}
+
+		.form-input__label,
+		.form-input__asterisk {
+			font-size: $font-size-normal;
+		}
+
+		&:active {
+			.form-input__label,
+			.form-input__asterisk {
+				font-size: $font-size-normal;
+			}
+		}
+	}
+
+	.animated-label-input input[data-input],
+	&:empty {
+		color: $dark-grey;
+		font-size: $font-size-heading4;
+		height: 50px;
+		line-height: 20px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.animated-label {
+	&.is-select {
+		.animated-label-text {
+			color: $regular-grey;
+			font-size: $font-size-normal;
+			position: relative;
+			top: 10px;
+		}
+	}
+
+	.animated-label-text {
+		bottom: -25px;
+		font-size: $font-size-heading3;
+		position: relative;
+		transition: font-size 0.5s ease;
+	}
+
+	&.active {
+		.animated-label-text {
+			bottom: 0;
+			color: $regular-grey;
+			font-size: $font-size-normal;
+			transition: font-size 0.5s ease;
+		}
+
+		// .animated-label-input {
+		//   color: $dark-grey;
+		// }
+	}
+}

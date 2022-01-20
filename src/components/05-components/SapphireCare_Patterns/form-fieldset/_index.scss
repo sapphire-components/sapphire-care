@@ -1,0 +1,17 @@
+@use '~Settings/colors'as *;
+@use '~Settings/fonts'as *;
+
+.form-fieldSet {
+
+  margin-bottom: 20px;
+
+  legend {
+    font-family: $latin-bold;
+    font-size: $font-size-heading2;
+    margin-bottom: 20px;
+
+    .is-rtl & {
+      font-family: $arabic-bold;
+    }
+  }
+}

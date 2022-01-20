@@ -1,0 +1,51 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+[id*='Notifications'] {
+	.list {
+		background: transparent;
+
+		&.list-group > [data-container] {
+			border-bottom: 1px solid $light-grey;
+			margin-bottom: $sapphire-sizes--small;
+		}
+	}
+
+	.unread .cardInfo .cardInfo__icon {
+		background-color: $regular-alpha;
+	}
+
+	.cardInfo {
+		height: unset;
+		margin: 0;
+		padding-bottom: $sapphire-sizes--small;
+		padding-top: 0;
+
+		&.disabled {
+			.title {
+				color: $regular-alpha;
+			}
+		}
+
+		.cardInfo__icon {
+			border-radius: 100%;
+			height: 8px;
+			margin-right: $sapphire-sizes--small;
+			margin-top: $sapphire-sizes--small;
+			min-width: 8px;
+		}
+
+		.cardInfo__container {
+			align-items: flex-start;
+			justify-content: center;
+		}
+
+		.cardInfo__rightcontent [data-expression] {
+			color: $mid-light-grey;
+			font-size: $font-size-small;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+	}
+}

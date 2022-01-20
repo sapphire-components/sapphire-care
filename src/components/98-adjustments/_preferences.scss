@@ -1,0 +1,36 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+[id*='PreferencesSettings'] {
+	.pref-settings__card {
+		align-items: center;
+		border-bottom: 1px solid $light-grey;
+		display: flex;
+		height: 80px;
+
+		> div {
+			flex: 1;
+		}
+
+		.pref-settings__iconLabel {
+			align-items: center;
+			display: flex;
+			gap: $sapphire-sizes--medium;
+
+			.label {
+				font-size: $font-size-heading4;
+			}
+		}
+
+		[data-block*='FingerprintPreferenceWB'] {
+			display: flex;
+			justify-content: center;
+
+			input.switch:checked:before {
+				background-color: $regular-alpha;
+				border-color: $regular-alpha;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+/* Counter */
+@use '~Settings/colors'as *;
+
+.counter-number {
+	font-size: 38px;
+	font-weight: 500;
+	letter-spacing: -0.45px;
+	line-height: 45px;
+}
+
+.counter-label {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.15px;
+	line-height: 18px;
+}

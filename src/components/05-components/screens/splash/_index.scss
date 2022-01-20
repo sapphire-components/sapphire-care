@@ -1,0 +1,48 @@
+/* Splash Screen */
+@use '~Settings/colors'as *;
+
+.splash-screen {
+	background-color: $regular-beta;
+
+	.splash-bg-image {
+		margin-top: -50px;
+		width: 170px;
+
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	.splash-loading {
+		bottom: 30%;
+		color: $regular-beta;
+		position: absolute;
+
+		.loading {
+			margin-top: 20px;
+
+			.OSLoaderContainer {
+				.OSLoadingBar {
+					background-color: $regular-alpha;
+				}
+			}
+		}
+	}
+}
+
+// .splash-logo {
+//   align-items: center;
+//   -webkit-box-align: center;
+//   -webkit-box-pack: center;
+//   display: -webkit-box;
+//   display: flex;
+//   height: 100px;
+//   justify-content: center;
+//   position: relative;
+// }
+
+// .splash-powerd-by {
+//   position: relative;
+//   z-index: 1;
+// }

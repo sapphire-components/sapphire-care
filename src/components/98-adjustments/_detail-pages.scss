@@ -1,0 +1,14 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+[id*='Information'] {
+	.section {
+		div[data-block*='CardInfo'] {
+			.cardInfo {
+				border-bottom: 1px solid $light-grey;
+				margin-bottom: $sapphire-sizes--medium;
+			}
+		}
+	}
+}

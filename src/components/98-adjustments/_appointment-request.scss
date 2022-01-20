@@ -1,0 +1,139 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+$height: 100px;
+
+[id*='Request__Appointment'] {
+	.header {
+		height: $height;
+	}
+
+	.section-title {
+		margin-bottom: $sapphire-sizes--small;
+	}
+
+	.search {
+		margin-bottom: $sapphire-sizes--medium;
+	}
+
+	.list-item {
+		padding: $sapphire-sizes--medium 0;
+	}
+
+	.content {
+		background: $sapphire-white;
+	}
+
+	[id*='SearchContainer'] {
+		.section {
+			.section-title {
+				font-family: $latin-bold;
+				font-size: $font-size-heading2;
+				margin-top: $sapphire-sizes--large;
+
+				.is-rtl & {
+					font-family: $arabic-bold;
+				}
+			}
+		}
+	}
+
+	[id*='Doctor__Section'] {
+		.card-profile__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.card-profile__title {
+				color: $dark-grey;
+				font-size: $font-size-heading4;
+			}
+		}
+
+		.card-profile__info {
+			color: $light-grey;
+		}
+	}
+
+	[id*='Calendar__Section'] {
+		a.select-date {
+			display: block;
+		}
+	}
+
+	[id*='Summary__Section'] {
+		[id*='Summary__TextContainer'] {
+			margin-bottom: $sapphire-sizes--xlarge;
+			margin-top: $sapphire-sizes--medium;
+
+			.summary__section--text {
+				color: $mid-light-grey;
+				line-height: 20px;
+				margin-bottom: $sapphire-sizes--xlarge;
+			}
+		}
+
+		.cardInfo {
+			border-bottom: 1px solid $light-grey;
+			height: auto;
+			margin-bottom: $sapphire-sizes--medium;
+
+			.cardInfo__label {
+				color: $mid-light-grey;
+			}
+
+			.cardInfo__link {
+				color: $regular-alpha;
+				font-size: $font-size-heading2;
+			}
+		}
+
+		.requiered-documents {
+			.title {
+				align-items: center;
+				display: flex;
+				font-size: $font-size-heading4;
+				margin-bottom: $sapphire-sizes--medium;
+
+				:nth-child(2) {
+					font-family: $latin-bold;
+					margin-left: $sapphire-sizes--small;
+
+					.is-rtl & {
+						font-family: $arabic-bold;
+					}
+				}
+			}
+
+			.info-message {
+				color: $mid-light-grey;
+				line-height: 20px;
+				margin-bottom: $sapphire-sizes--medium;
+			}
+
+			.list-content {
+				margin-bottom: $sapphire-sizes--medium;
+
+				.content {
+					align-items: center;
+					display: flex;
+					flex-direction: row;
+
+					:first-child {
+						flex: 1;
+					}
+
+					:nth-child(-n + 2) {
+						flex: 2;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section-title-custom {
+	font-family: $latin-bold;
+	font-size: $font-size-heading2;
+}

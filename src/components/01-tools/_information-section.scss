@@ -1,0 +1,34 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+%information-section {
+	[id*='Information'] {
+		.section {
+			padding-bottom: $sapphire-sizes--large;
+			padding-top: $sapphire-sizes--large;
+		}
+
+		.section-title {
+			color: $dark-grey;
+			font-family: $latin-bold;
+			font-size: $font-size-heading2;
+
+			.is-rtl & {
+				font-family: $arabic-bold;
+			}
+		}
+
+		.title {
+			margin-bottom: $sapphire-sizes--xsmall;
+		}
+
+		.cardInfo__label {
+			color: $mid-light-grey;
+		}
+
+		.cardInfo__icon {
+			font-size: 25px;
+		}
+	}
+}

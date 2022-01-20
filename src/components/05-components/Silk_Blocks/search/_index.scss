@@ -1,0 +1,42 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+$border-radius: 8px;
+
+.search {
+	border: 1px solid $light-grey;
+	border-radius: $border-radius;
+	font-size: $font-size-heading4;
+
+	&:focus,
+	&:empty:focus {
+		border-bottom: 1px solid $regular-alpha;
+	}
+
+	.search-input {
+		input[data-input] {
+			border-radius: $border-radius !important;
+			font-size: inherit;
+			padding-left: 34px !important;
+			padding-right: $sapphire-sizes--medium;
+
+			&::placeholder {
+				color: $light-grey;
+			}
+		}
+
+		&:after {
+			color: $light-grey;
+			font-size: $font-size-heading4;
+			left: $sapphire-sizes--small;
+			top: $sapphire-sizes--medium;
+		}
+	}
+}
+
+.search input[data-input],
+.search input[data-input]:empty {
+	border: 1px solid rgba(0, 0, 0, 0);
+	color: $dark-grey;
+}

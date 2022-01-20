@@ -1,0 +1,15 @@
+/* Badge */
+
+@use '~Settings/colors'as *;
+
+.badge {
+  border-radius: 100px;
+  font-size: 14px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.badge.background-white {
+  color: $regular-alpha
+    /*primary-color*/
+}

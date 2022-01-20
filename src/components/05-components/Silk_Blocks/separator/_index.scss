@@ -1,0 +1,6 @@
+/* Separator */
+@use '~Settings/colors'as *;
+
+.separator {
+  background-color: $light-grey;
+}

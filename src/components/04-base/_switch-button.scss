@@ -1,0 +1,40 @@
+@use '~Settings/colors'as *;
+
+/* Toggle Button / Switch */
+input[data-switch].switch:empty {
+  background-color: rgba(34, 31, 31, .26);
+}
+
+input.switch:empty:before {
+  background: $light-grey;
+}
+
+input.switch:checked:before {
+  background-color: $regular-green;
+  border-color: $regular-green;
+}
+
+input.switch:empty:after {
+  background-color: $sapphire-white;
+  border-color: $light-grey;
+}
+
+input.switch[disabled]:empty:before {
+  background-color: $sapphire-white;
+  border: 1px solid $mid-light-grey;
+}
+
+input.switch[disabled]:empty:checked:before {
+  background-color: $light-grey;
+  border-color: transparent;
+}
+
+input.switch[disabled]:empty:after {
+  background-color: $mid-light-grey;
+  border-color: $mid-light-grey;
+}
+
+input.switch[disabled]:checked:after {
+  background-color: $sapphire-white;
+  border-color: transparent;
+}

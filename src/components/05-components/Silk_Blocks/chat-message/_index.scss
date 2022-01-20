@@ -1,0 +1,23 @@
+/* Chat Message */
+
+@use '~Settings/colors'as *;
+
+.chat.left .chat-message {
+  background-color: transparent;
+  padding-top: 5px;
+}
+
+.chat.left .chat-message:before {
+  display: none;
+}
+
+.chat.right .chat-message {
+  background-color: $regular-alpha;
+  /*primary-color*/
+  color: $sapphire-white;
+}
+
+.chat.right .chat-message:before {
+  border-right-color: $regular-alpha;
+  /*primary-color*/
+}

@@ -1,0 +1,13 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+
+@mixin remainDays {
+	align-items: center;
+	background-color: $sapphire-care-red;
+	border-radius: 120px;
+	display: flex;
+	font-size: $font-size-small;
+	height: 20px;
+	justify-content: center;
+	width: 80px;
+}

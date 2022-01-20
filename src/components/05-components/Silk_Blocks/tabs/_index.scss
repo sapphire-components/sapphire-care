@@ -1,0 +1,55 @@
+// Tabs
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+.tabs-header {
+	background-color: transparent;
+	margin-bottom: $sapphire-sizes--medium;
+
+	.screen.base & {
+		margin-left: -$sapphire-sizes--medium;
+		margin-right: -$sapphire-sizes--medium;
+		width: calc(100% + #{$sapphire-sizes--xlarge});
+	}
+}
+
+.tabs-header-tab {
+	border-bottom: 1px solid $light-grey;
+	color: $mid-dark-grey;
+	font-size: $font-size-heading4;
+	padding: $sapphire-sizes--small $sapphire-sizes--small $sapphire-sizes--medium;
+	text-transform: none;
+}
+
+.tabs-underline {
+	background-color: $regular-alpha;
+	/*primary-color*/
+}
+
+.tabs-header-tab.active {
+	border-bottom: 2px solid $regular-alpha;
+	/*primary-color*/
+	color: $sapphire-care-blue1;
+	font-family: $latin-bold;
+
+	.is-rtl & {
+		font-family: $arabic-bold;
+	}
+
+	/*secondary-color*/
+}
+
+/* hack to force tab to be full height for appointments */
+.tabs-content-tab .blank-slate.large {
+	min-height: 60vh;
+}
+
+.tabs-content-tab .blank-slate.large .blank-slate-icon {
+	font-size: 80px;
+}
+
+.tabs-content-tab .blank-slate.large .blank-slate-icon,
+.lineHeightOne .blank-slate.large .blank-slate-icon {
+	line-height: 1;
+}

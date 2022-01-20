@@ -1,0 +1,152 @@
+// Card Wizard
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/shadows' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/arrow-left-arabic'as *;
+
+.cardWizard {
+	align-items: center;
+	background-color: $sapphire-white;
+	border-radius: $border-radius-medium;
+	box-shadow: $shadow-small;
+	display: flex;
+	font-size: $font-size-heading4;
+	height: 70px;
+	justify-content: space-between;
+	margin-bottom: $sapphire-sizes--medium;
+	padding: $sapphire-sizes--large $sapphire-sizes--medium;
+
+	&.selected {
+		border: 2px solid $regular-alpha;
+	}
+
+	&.hasContent {
+		flex-wrap: wrap;
+		height: unset;
+		padding: $sapphire-sizes--medium 0;
+
+		.cardWizard__text,
+		.cardWizard__link {
+			padding: 0 $sapphire-sizes--medium;
+		}
+
+		.cardWizard__content {
+			background-color: rgba($regular-alpha, 20%);
+			border-radius: 0 0 10px 10px;
+			flex-basis: 100%;
+			margin-bottom: -$sapphire-sizes--medium;
+			margin-top: $sapphire-sizes--medium;
+			padding: $sapphire-sizes--medium;
+		}
+	}
+
+	&.hasImage {
+		height: unset;
+		padding: $sapphire-sizes--small;
+	}
+
+	&.isDisabled {
+		background-color: $sapphire-light;
+		box-shadow: none;
+		color: $mid-light-grey;
+		pointer-events: none;
+
+		.cardWizard__link i.sc,
+		.cardWizard__image i.sc {
+			color: $mid-light-grey;
+		}
+	}
+
+	.cardWizard__link {
+		@extend %arrow-left;
+
+		color: $regular-alpha;
+		font-size: $font-size-heading1;
+	}
+
+	.cardWizard__header {
+		align-items: center;
+		display: flex;
+		gap: $sapphire-sizes--medium;
+	}
+
+	.cardWizard__image img {
+		border-radius: $border-radius-medium;
+		object-fit: cover;
+	}
+
+	.cardWizard__imageLeft {
+		align-items: center;
+		background-color: $body-grey;
+		border-radius: $border-radius-medium;
+		color: $sapphire-care-blue1;
+		display: flex;
+		font-size: $font-size-huge;
+		height: 54px;
+		justify-content: center;
+		width: 54px;
+	}
+
+	&.imageBg {
+		min-height: 140px;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+
+		.cardWizard__text {
+			align-items: center;
+			background: rgb(0, 43, 73);
+			background: linear-gradient(166deg, rgba(0, 43, 73, 0) 0%, rgba(0, 43, 0, 0.77) 100%, rgba(0, 43, 0, 0.8) 100%);
+			color: $sapphire-white;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+			padding-right: 40px;
+			width: 100%;
+			z-index: 1;
+
+			> span {
+				font-family: $latin-bold;
+
+				padding-left: $sapphire-sizes--medium;
+				width: 100%;
+
+				.is-rtl & {
+					font-family: $arabic-bold;
+				}
+			}
+
+			:nth-child(2) {
+				font-family: $latin-regular;
+				font-size: $font-size-normal;
+
+				.is-rtl & {
+					font-family: $arabic-regular;
+				}
+			}
+		}
+
+		.cardWizard__link {
+			align-items: center;
+			display: flex;
+			height: 100%;
+			padding-right: $sapphire-sizes--medium;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+		}
+
+		img {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+[id*='ExamDetail'] {
+	.Title_Value {
+		color: $sapphire-white;
+	}
+
+	[id*='ExamDetailHeader'] {
+		.section {
+			padding-bottom: $sapphire-sizes--xlarge;
+		}
+
+		.section-title {
+			font-size: $font-size-normal;
+		}
+
+		.Exam__Container {
+			font-family: $latin-regular;
+			margin-top: $sapphire-sizes--large;
+
+			.is-rtl & {
+				font-family: $arabic-regular;
+			}
+
+			> div {
+				flex: 1;
+			}
+
+			> div:nth-child(2) {
+				.cardInfo__container {
+					.cardInfo__content {
+						font-family: $latin-regular;
+						font-size: $font-size-heading4;
+						opacity: 1;
+
+						.is-rtl & {
+							font-family: $arabic-regular;
+						}
+					}
+				}
+			}
+
+			.cardInfo {
+				&__label,
+				&__container {
+					color: $sapphire-white;
+
+					.card__info,
+					.cardInfo__content {
+						color: $sapphire-white;
+					}
+
+					.cardInfo__content {
+						opacity: 0.6;
+					}
+				}
+
+				&__label {
+					font-size: $font-size-heading4;
+				}
+
+				&__container {
+					.cardInfo__icon {
+						color: $sapphire-white;
+					}
+
+					.cardInfo__content__wrapper {
+						.title {
+							color: $sapphire-white;
+							font-size: $font-size-heading4;
+						}
+					}
+				}
+
+				.cardInfo__label {
+					font-family: $latin-regular;
+
+					.is-rtl & {
+						font-family: $arabic-regular;
+					}
+				}
+			}
+		}
+	}
+
+	[id*='SearchContainer'] {
+		.section {
+			padding-top: 25px;
+		}
+	}
+
+	@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+		[id*='ExamDetail'] {
+			.section {
+				padding-bottom: 45px;
+			}
+
+			.Exam__Container {
+				margin-top: 5px;
+
+				> div:first-child {
+					.cardInfo {
+						.cardInfo__content {
+							position: absolute;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+@use '~Settings/colors'as *;
+
+div[data-block*='Specialties.SpecialtiesList'] {
+	div[data-block='SapphireCare_Patterns.SmallCard'] {
+		> div {
+			border-bottom: none;
+		}
+	}
+
+	div[data-block='SapphireCare_Patterns.SmallCard'] + div {
+		all: unset;
+	}
+}

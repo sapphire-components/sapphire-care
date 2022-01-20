@@ -1,0 +1,40 @@
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+
+$height: 100px;
+$width: 105px;
+
+.card-icon {
+	align-items: center;
+	background-color: $sapphire-white;
+	border-radius: $border-radius-medium;
+	box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.14);
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	height: $height;
+	justify-content: center;
+
+	.is-loading & {
+		background-color: transparent;
+	}
+
+	&__icon {
+		color: $regular-alpha;
+		display: contents;
+		font-size: 50px;
+
+		.is-loading & {
+			visibility: hidden;
+		}
+	}
+
+	&__text {
+		font-family: $latin-bold;
+
+		.is-rtl & {
+			font-family: $arabic-bold;
+		}
+	}
+}

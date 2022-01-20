@@ -1,0 +1,37 @@
+@use '~Settings/fonts'as *;
+
+[id*='AppointmentList'] {
+  .section {
+    .section-title {
+      font-family: $latin-bold;
+      font-size: $font-size-heading2;
+
+      .is-rtl & {
+        font-family: $arabic-bold;
+      }
+    }
+
+
+    .is-loading {
+      display: block;
+    }
+
+    .section {
+      padding: 0;
+
+      .appointment-card {
+        max-width: unset;
+      }
+    }
+  }
+
+  .list-item {
+    border: none;
+  }
+
+  [id*='Scheduled'] {
+    .section {
+      margin-bottom: 20px;
+    }
+  }
+}

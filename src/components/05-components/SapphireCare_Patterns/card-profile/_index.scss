@@ -1,0 +1,86 @@
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/arrow-left-arabic' as *;
+@use '~Tools/card-profile-image' as *;
+@use '~Tools/remaining-days' as *;
+
+.card-profile {
+	display: flex;
+	gap: $sapphire-sizes--medium;
+
+	&.selected {
+		border: 2px solid $regular-alpha;
+		border-radius: $border-radius-medium;
+	}
+
+	&__image {
+		@include cardImageSize();
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+
+		.card-profile__title__container {
+			display: flex;
+			justify-content: space-between;
+
+			.card-profile__title {
+				color: $sapphire-white;
+				flex: 1;
+				font-size: $font-size-heading1;
+			}
+
+			.card-profile__right-badge {
+				border: 1px solid $mid-light-grey;
+				border-radius: $border-radius-medium;
+				color: $mid-light-grey;
+				font-size: $font-size-small;
+				max-height: 25px;
+				padding: $sapphire-sizes--xxsmall $sapphire-sizes--xsmall;
+			}
+
+			.card-profile__bottom-badge {
+				color: $mid-light-grey;
+			}
+		}
+
+		.card-profile__info,
+		.card-profile__title__additionalinfo {
+			color: $sapphire-white;
+		}
+
+		.card-profile__title__additionalinfo {
+			padding: $sapphire-sizes--small 0;
+		}
+	}
+
+	&__link {
+		a {
+			color: $light-grey;
+		}
+
+		@extend %arrow-left;
+		align-items: center;
+		display: flex;
+	}
+}
+
+.cardInfo__label,
+.title {
+	color: $dark-grey;
+	font-family: $latin-bold;
+
+	.is-rtl & {
+		font-family: $arabic-bold;
+	}
+}
+
+.title {
+	font-size: $font-size-heading3;
+}

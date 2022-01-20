@@ -1,0 +1,6 @@
+// Margin Container
+@use '~Settings/sizes' as *;
+
+.margin-container {
+	padding: $sapphire-sizes--medium;
+}

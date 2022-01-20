@@ -1,0 +1,54 @@
+@use '~Settings/colors' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/information-section' as *;
+
+[id*='AppointementDetail'] {
+	.section {
+		.section-title {
+			color: $sapphire-white;
+
+			.Date__Container {
+				margin: 0;
+			}
+		}
+	}
+
+	@extend %information-section;
+
+	[id*='Request_Declined'] {
+		.section {
+			margin-top: $sapphire-sizes--xlarge;
+		}
+	}
+
+	[id*='Information'] {
+		.section {
+			padding-top: 0;
+		}
+	}
+
+	[id*='Reschedule'] {
+		.section {
+			.reschedule__btn,
+			.reschedule__cancel {
+				align-items: center;
+				display: flex;
+				height: 48px;
+				justify-content: center;
+			}
+
+			.reschedule__btn {
+				margin-bottom: $sapphire-sizes--medium;
+
+				.btn {
+					align-items: center;
+					border-radius: 24px;
+					color: $sapphire-white;
+					display: flex;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+@use '~Settings/colors' as *;
+@use '~Settings/sizes' as *;
+
+[id*='HospitalAndServiceList'] {
+	.search {
+		margin-bottom: $sapphire-sizes--medium;
+	}
+
+	[id*='HospitalListContent'] {
+		.card-image-top {
+			margin-bottom: $sapphire-sizes--medium;
+
+			.card-image-top-actions-wrapper {
+				padding: $sapphire-sizes--small 0;
+			}
+
+			.card-image-top-actions-wrapper-act {
+				color: $light-grey;
+				padding: 0;
+
+				&:nth-of-type(-n + 4):not(:first-child) {
+					border-left: 1px solid;
+				}
+			}
+		}
+	}
+}

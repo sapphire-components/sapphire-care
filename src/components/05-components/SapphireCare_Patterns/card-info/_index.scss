@@ -1,0 +1,74 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/arrow-left-arabic' as *;
+@use '~Tools/card-profile-image' as *;
+
+.cardInfo {
+	height: 110px;
+
+	&.no-label {
+		height: auto;
+		margin-bottom: $sapphire-sizes--medium;
+		padding: $sapphire-sizes--medium 0;
+	}
+
+	&--small {
+		height: 85px;
+	}
+
+	&__label {
+		color: $regular-grey;
+		margin-bottom: $sapphire-sizes--medium;
+
+		@media screen and (max-width: 320px) {
+			margin-bottom: $sapphire-sizes--xsmall;
+		}
+	}
+
+	&__container {
+		display: flex;
+		gap: $sapphire-sizes--medium;
+		min-height: 28px;
+
+		.cardInfo__content__wrapper {
+			width: 100%;
+
+			.cardInfo__title {
+				color: $regular-grey;
+			}
+
+			.cardInfo__content {
+				font-size: $font-size-heading4;
+			}
+		}
+
+		.cardInfo__icon {
+			align-items: flex-start;
+			color: $regular-grey;
+			display: flex;
+			font-size: $font-size-heading2;
+
+			> div > div {
+				display: flex;
+			}
+		}
+
+		.cardInfo__link {
+			color: $light-grey;
+			font-size: $font-size-big;
+			text-align: right;
+
+			@extend %arrow-left;
+		}
+
+		.cardInfo__image {
+			@include cardImageSize(50px, $regular-alpha);
+
+			.is-loading {
+				border-radius: 50%;
+			}
+		}
+	}
+}

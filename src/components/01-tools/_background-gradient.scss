@@ -1,0 +1,5 @@
+@use '~Settings/colors' as *;
+
+@mixin backgroundGradient {
+	background-color: $sapphire-care-blue1;
+}

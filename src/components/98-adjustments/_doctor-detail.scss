@@ -1,0 +1,56 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+[id*='DoctorDetail'] {
+	[id*='AppointmentRequest'] {
+		bottom: -$sapphire-sizes--large;
+		position: relative;
+	}
+
+	[id*='PersonalInfo'] {
+		position: relative;
+
+		.section {
+			background-color: $sapphire-white;
+			padding-top: $sapphire-sizes--xxlarge;
+		}
+
+		.bio {
+			padding-bottom: $sapphire-sizes--xlarge;
+
+			.bio__title {
+				color: $dark-grey;
+				font-family: $latin-bold;
+
+				.is-rtl & {
+					font-family: $arabic-bold;
+				}
+			}
+		}
+
+		.bio__title,
+		.cardInfo__label {
+			font-size: $font-size-heading3;
+		}
+
+		.bio,
+		.cardInfo {
+			border-bottom: 1px solid $light-grey;
+			margin-bottom: $sapphire-sizes--large;
+		}
+
+		.cardInfo__icon {
+			font-size: $font-size-big;
+		}
+
+		.section-content {
+			:nth-child(5) {
+				.cardInfo {
+					height: auto;
+					padding-bottom: $sapphire-sizes--large;
+				}
+			}
+		}
+	}
+}

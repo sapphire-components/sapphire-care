@@ -1,0 +1,27 @@
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+div[data-block*='SapphireCare_Patterns.LanguangeSelector'] {
+	width: 100%;
+
+	.languange-selector {
+		border: 1px solid;
+		border-radius: $border-radius-small;
+		color: $regular-alpha;
+		display: flex;
+		width: 100%;
+
+		&__button {
+			flex: 1;
+			padding: $sapphire-sizes--small;
+			text-align: center;
+
+			&.active {
+				background-color: $regular-alpha;
+				color: $sapphire-white;
+			}
+		}
+	}
+}

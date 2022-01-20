@@ -1,0 +1,36 @@
+// Validation colors
+@use '~Settings/colors' as *;
+@use '~Settings/sizes' as *;
+
+.alert-success,
+.alert-error,
+.alert-warning,
+.alert-info {
+	font-weight: unset;
+	padding: $sapphire-sizes--medium;
+	padding-left: $sapphire-sizes--xlarge;
+}
+
+.alert-success {
+	background-color: $regular-green;
+	border: 0;
+}
+
+.alert-error {
+	background-color: $regular-red;
+	border: 0;
+}
+
+.alert-warning {
+	background-color: $regular-orange;
+	border: 0;
+}
+
+.alert-info {
+	background-color: $regular-blue;
+	border: 0;
+}
+
+.alert-icon {
+	width: 35px;
+}

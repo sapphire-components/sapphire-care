@@ -1,0 +1,77 @@
+/* Menu */
+
+@use '~Settings/colors'as *;
+
+.app-menu {
+	background-color: $sapphire-care-blue1;
+	box-shadow: -15px 2px 40px 0 rgba(92, 92, 92, 0.41);
+	padding-bottom: 0 !important;
+
+	.app-menu-links {
+		background-color: $regular-white;
+	}
+}
+
+.app-menu a .icon,
+.submenu .icon {
+	color: $regular-alpha;
+	/*primary-color*/
+	font-size: 26px;
+	margin: 0;
+	padding-right: 20px;
+	width: 45px;
+}
+
+.menu--visible .menu-background {
+	opacity: 0.25;
+}
+
+.app-menu-links > a {
+	padding-left: 20px !important;
+}
+
+.submenu-item {
+	padding-left: 20px !important;
+}
+
+.app-menu-container {
+	transform: translateX(-110vw) translateZ(0);
+}
+
+.is-rtl {
+	.submenu-item {
+		&:before {
+			left: 15px;
+		}
+
+		&:after {
+			left: 20px;
+		}
+	}
+
+	.submenu.open {
+		.submenu-item {
+			&:before {
+				left: 20px;
+			}
+
+			&:after {
+				left: 15px;
+			}
+		}
+	}
+
+	.app-menu-container {
+		transform: translateX(110vw) translateZ(0);
+	}
+}
+
+.submenu-items {
+	a,
+	a:link,
+	a:visited {
+		background-color: $sapphire-white;
+		border: 0;
+		padding: 14px 10px 14px 65px;
+	}
+}

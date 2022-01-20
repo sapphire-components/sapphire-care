@@ -1,0 +1,54 @@
+/*CardTwoColsBig*/
+
+@use '~Settings/colors'as *;
+@use '~Settings/fonts'as *;
+
+.card-two-cols-big {
+  background-color: $sapphire-white;
+  color: $dark-grey;
+  display: table;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+.card-two-cols-big-left,
+.card-two-cols-big-right {
+  display: table-cell;
+  font-family: $latin-bold;
+  padding: 12px 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+
+  .is-rtl & {
+    font-family: $arabic-bold;
+  }
+}
+
+.card-two-cols-big-left.separator-border:after {
+  background-color: $light-grey;
+  bottom: 4px;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 4px;
+  width: 1px;
+  z-index: 1;
+}
+
+
+.is-rtl .card-two-cols-big-left.separator-border:after {
+  left: 0;
+  right: auto;
+}
+
+
+.card-two-cols-big-left-icon,
+.card-two-cols-big-right-icon {
+  color: $regular-alpha;
+  /*primary-color*/
+  font-size: 40px;
+}

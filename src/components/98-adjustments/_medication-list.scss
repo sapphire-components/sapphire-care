@@ -1,0 +1,23 @@
+@use '~Settings/colors' as *;
+@use '~Settings/sizes' as *;
+
+[id*='MedicationList'] {
+	.list-item {
+		padding: $sapphire-sizes--large 0;
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+
+	.list-card__title {
+		margin-bottom: $sapphire-sizes--xsmall;
+	}
+}
+
+[id*='MedicationSection'] {
+	.list .list-item {
+		border-bottom: 1px solid $light-grey;
+		padding: $sapphire-sizes--medium 0;
+	}
+}

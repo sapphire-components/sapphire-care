@@ -1,0 +1,62 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+$icon-size: 40px;
+
+[id*='Contacts'] {
+	.section-content {
+		> div {
+			border-bottom: 1px solid $light-grey;
+			margin-bottom: $sapphire-sizes--large;
+			padding-bottom: $sapphire-sizes--large;
+		}
+	}
+
+	.contacts-title {
+		.subtitle {
+			font-size: $font-size-heading4;
+		}
+	}
+
+	.contacts-contact {
+		.mobile-number {
+			border-bottom: 1px solid $light-grey;
+			margin-bottom: $sapphire-sizes--large;
+			padding-bottom: $sapphire-sizes--large;
+		}
+
+		.mobile-number,
+		.e-mail {
+			.subtitle {
+				color: $regular-alpha;
+				font-size: $font-size-heading4;
+			}
+		}
+	}
+
+	.contacts-social_media {
+		.social-media__container {
+			> div {
+				> div:nth-child(3) {
+					margin: 0 $sapphire-sizes--large;
+				}
+
+				.social-media__icon {
+					align-items: center;
+					display: inline-flex;
+					height: $icon-size;
+					justify-content: center;
+
+					a {
+						font-size: $font-size-normal;
+					}
+
+					.is-rtl & {
+						float: inline-end;
+					}
+				}
+			}
+		}
+	}
+}

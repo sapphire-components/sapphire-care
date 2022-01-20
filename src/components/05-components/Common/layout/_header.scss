@@ -1,0 +1,178 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/background-gradient' as gradient;
+
+.screen {
+	z-index: 1;
+
+	&.base {
+		.header {
+			background-color: transparent;
+
+			.header-title {
+				color: $sapphire-care-blue1;
+			}
+		}
+
+		.content,
+		.list {
+			background-color: transparent;
+		}
+
+		.list-item {
+			border-bottom: none;
+			padding: $sapphire-sizes--medium $sapphire-sizes--xsmall;
+		}
+	}
+
+	&.detail {
+		.header {
+			background-color: transparent;
+			height: auto;
+
+			&.header-custom {
+				background: linear-gradient(315deg, rgba(0, 86, 128, 0) 0%, #002b49 100%);
+
+				.header-title {
+					line-height: 30px;
+				}
+
+				.header-content {
+					color: $sapphire-white;
+					font-size: 24px;
+					padding-bottom: 30px;
+				}
+			}
+
+			.header-title {
+				font-size: $font-size-heading3;
+			}
+
+			.header-content {
+				.section {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+
+		.header-left {
+			height: 28px;
+
+			.app-menu-icon.back {
+				background-color: $sapphire-white;
+				border-radius: 50%;
+				height: 30px;
+				width: 30px;
+
+				i.sc-arrow-left-cal {
+					font-size: 25px;
+					margin-left: 0;
+				}
+			}
+		}
+
+		.header-right a {
+			background-color: $sapphire-white;
+			border-radius: 100px;
+			font-size: 14px;
+			line-height: 30px;
+			padding: 0 $sapphire-sizes--medium;
+		}
+
+		.shadow {
+			display: none;
+		}
+	}
+
+	.header-left {
+		i.sc-arrow-left-cal {
+			margin-left: -8px;
+		}
+	}
+}
+
+.header {
+	color: inherit;
+	display: flex;
+	flex-direction: column;
+	//height: 120px;
+	justify-content: center;
+
+	a,
+	a:link,
+	a:visited {
+		color: $regular-alpha;
+		/*primary-color*/
+		margin: 0;
+		padding: 0;
+	}
+
+	.app-menu-icon {
+		&.back {
+			.is-rtl & {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.app-menu-icon {
+	.is-loading & {
+		visibility: hidden;
+	}
+}
+
+.header-top {
+	height: 70px;
+	padding: 0;
+}
+
+.app-menu-line {
+	background-color: $regular-alpha;
+	/*primary-color*/
+}
+
+.header-title,
+.header-right {
+	color: inherit;
+}
+
+.header-title {
+	color: $sapphire-white;
+	flex: 6;
+	font-family: $latin-bold;
+	font-size: $font-size-heading1;
+	text-align: left;
+	white-space: nowrap;
+
+	.is-rtl & {
+		font-family: $arabic-bold;
+	}
+
+	img {
+		display: block;
+		height: 45px;
+		margin: 0 auto;
+	}
+}
+
+.is-rtl .header-title {
+	text-align: right;
+}
+
+.header-content button.button-group-item.button-group-selected-item {
+	color: $regular-alpha;
+
+	&:after {
+		background-color: $regular-alpha;
+	}
+}
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+	.header-top {
+		height: 60px;
+	}
+}

@@ -1,0 +1,170 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/background-gradient' as *;
+@use '~Tools/information-section' as *;
+
+[id*='PrescriptionDetail'] {
+	.section-title {
+		color: $sapphire-white;
+
+		[id*='DrugMg'],
+		[id*='Date'] {
+			font-family: $latin-regular;
+			font-size: $font-size-normal;
+
+			.is-rtl & {
+				font-family: $arabic-regular;
+			}
+		}
+	}
+
+	[id*='PrescriptionSquares'] {
+		.section {
+			padding-bottom: $sapphire-sizes--medium;
+			padding-top: $sapphire-sizes--xsmall;
+
+			.tabs-header {
+				margin-bottom: $sapphire-sizes--large;
+
+				.tabs-header-tab {
+					color: $sapphire-white;
+					font-family: $latin-regular;
+
+					.is-rtl & {
+						font-family: $arabic-regular;
+					}
+
+					&.active {
+						font-family: $latin-bold;
+
+						.is-rtl & {
+							font-family: $arabic-bold;
+						}
+					}
+				}
+			}
+
+			[data-block*='SapphireCare_Patterns.CardPrescription'] {
+				flex: 1;
+				margin: 0 $sapphire-sizes--small 0 $sapphire-sizes--small;
+
+				&:first-child {
+					margin-left: 0;
+
+					.is-rtl & {
+						margin-left: $sapphire-sizes--small;
+						margin-right: 0;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+
+					.is-rtl & {
+						margin-left: 0;
+						margin-right: $sapphire-sizes--small;
+					}
+				}
+			}
+
+			.period__row {
+				> div {
+					flex: 1;
+
+					&:nth-child(2) {
+						margin: 0 $sapphire-sizes--xsmall;
+					}
+				}
+			}
+
+			.period__row:first-of-type {
+				margin-bottom: $sapphire-sizes--medium;
+			}
+
+			.card-prescription {
+				&__content,
+				&__icon,
+				&__text {
+					height: 100%;
+				}
+
+				@media screen and (max-width: 576px) {
+					display: block;
+					font-size: $font-size-small;
+					padding: $sapphire-sizes--small;
+					word-break: break-word;
+				}
+			}
+
+			.card-prescription__icon {
+				font-size: $font-size-heading2;
+				left: -5px;
+				margin: 0;
+				position: relative;
+
+				.is-rtl & {
+					right: -5px;
+				}
+			}
+		}
+	}
+
+	[id*='List_MedicationInfoHeader'] {
+		display: contents;
+
+		> div {
+			display: contents;
+		}
+	}
+
+	[id*='DosageInformation'] {
+		.section {
+			padding-bottom: 0;
+		}
+
+		.list {
+			[data-block*='_ListItem']:last-of-type {
+				.dosage-info__list-item {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	@extend %information-section;
+}
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+	[id*='PrescriptionDetail'] {
+		[id*='PrescriptionSquares'] {
+			.section {
+				.tabs-header {
+					margin-bottom: $sapphire-sizes--medium;
+
+					.tabs-header-tab {
+						padding: $sapphire-sizes--xsmall;
+					}
+				}
+
+				.card-prescription {
+					height: 80px;
+					padding: $sapphire-sizes--xsmall;
+				}
+			}
+		}
+
+		[id*='Information'] {
+			.section {
+				padding-bottom: unset;
+				padding-top: $sapphire-sizes--xsmall;
+
+				.cardInfo {
+					height: auto;
+					padding-bottom: $sapphire-sizes--small;
+				}
+			}
+		}
+	}
+}

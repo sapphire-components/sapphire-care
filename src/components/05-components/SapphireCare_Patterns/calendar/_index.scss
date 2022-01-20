@@ -1,0 +1,98 @@
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/shadows' as *;
+@use '~Settings/sizes' as *;
+
+.calendar {
+	background-color: $sapphire-white;
+	border-radius: $border-radius-medium;
+	box-shadow: $shadow-small;
+	padding: 0 $sapphire-sizes--medium $sapphire-sizes--small;
+}
+
+.calendar .pika-title {
+	border-bottom: 1px solid $light-grey;
+	display: block;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.calendar .pika-title .pika-label {
+	color: $dark-grey;
+	display: inline-block;
+	font-weight: 400;
+}
+
+.calendar .pika-title .pika-prev,
+.calendar .pika-title .pika-next {
+	color: $regular-alpha;
+	/*primary-color*/
+	display: block;
+	position: absolute;
+	top: 2px;
+}
+
+.calendar .pika-title .pika-prev:after,
+.calendar .pika-title .pika-next:after {
+	font-size: 20px;
+}
+
+.calendar .pika-title .pika-prev {
+	left: 15%;
+	margin: 0;
+	right: auto;
+}
+
+.calendar .pika-title .pika-next {
+	right: 15%;
+}
+
+.is-rtl .calendar .pika-title .pika-prev {
+	left: auto;
+	right: 15%;
+}
+
+.is-rtl .calendar .pika-title .pika-prev:after {
+	float: right;
+}
+
+.is-rtl .calendar .pika-title .pika-next {
+	left: 15%;
+	right: auto;
+}
+
+.calendar table.pika-table thead tr th {
+	text-align: center;
+}
+
+.calendar table.pika-table thead tr th abbr {
+	color: $dark-grey;
+	display: inline-block;
+	font-size: 0;
+	text-decoration: none;
+}
+
+.calendar table.pika-table thead tr th abbr:first-letter {
+	font-size: 12px;
+}
+
+.calendar table.pika-table tbody tr td {
+	text-align: center;
+}
+
+.calendar .pika-button {
+	height: 35px;
+	width: 35px;
+}
+
+.calendar .is-today .pika-button {
+	color: $regular-grey;
+}
+
+.calendar .is-today.is-selected .pika-button,
+.calendar .is-selected .pika-button {
+	background-color: $regular-alpha;
+	/*primary-color*/
+	color: $sapphire-white;
+}

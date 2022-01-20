@@ -1,0 +1,37 @@
+/* Section Expandable*/
+
+@use '~Settings/colors'as *;
+
+.section-expandable {
+  background-color: $sapphire-white;
+  border-bottom: 1px solid $light-grey;
+  border-collapse: collapse;
+}
+
+.section-expandable-title {
+  padding: 15px 15px 10px;
+}
+
+.section-expandable-title .dividers {
+  color: $dark-grey;
+}
+
+.section-expandable.open .section-expandable-title .dividers {
+  color: $regular-alpha;
+  /*primary-color*/
+}
+
+.section-expandable-content {
+  padding: 10px 15px 15px;
+}
+
+[data-block="Blocks.SectionExpandable"]+[data-block="Blocks.SectionExpandable"] .section-expandable {
+  border-top: 0;
+}
+
+.section-expandable-icon:before,
+.section-expandable-icon:after {
+  background: rgba(0, 0, 0, 0.38);
+  height: 9px;
+  width: 2px;
+}

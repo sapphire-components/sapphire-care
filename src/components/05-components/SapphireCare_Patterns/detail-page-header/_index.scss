@@ -1,0 +1,131 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/remaining-days'as *;
+
+$icons-size: 48px;
+
+.DetailHeader {
+	position: relative;
+
+	.cardInfo {
+		background-color: transparent;
+	}
+
+	&.WithLinks {
+		.Date__Container {
+			margin-bottom: $sapphire-sizes--xlarge;
+		}
+	}
+
+	.section-title {
+		color: $sapphire-white;
+
+		.Title__Container {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: $sapphire-sizes--small;
+
+			.Title_Value {
+				font-size: $font-size-heading1;
+
+				[id*='DrugMg'] {
+					font-family: $latin-regular;
+					font-size: $font-size-normal;
+					margin-left: $sapphire-sizes--xsmall;
+
+					.is-rtl & {
+						font-family: $arabic-regular;
+					}
+				}
+			}
+
+			.RemainDays {
+				@include remainDays;
+
+				font-family: $latin-bold;
+				font-size: $font-size-small;
+
+				.is-rtl & {
+					font-family: $arabic-bold;
+				}
+			}
+		}
+
+		.SubTitle__Container {
+			font-size: $font-size-heading1;
+		}
+
+		.Date__Container {
+			align-items: center;
+			display: flex;
+
+			div[id*='Icon__Container'] {
+				display: flex;
+				font-size: $font-size-heading2;
+				margin-right: $sapphire-sizes--xsmall;
+
+				.is-rtl & {
+					margin-left: $sapphire-sizes--xsmall;
+					margin-right: unset;
+				}
+			}
+
+			div[id*='Date__Value'] {
+				display: contents;
+				font-family: $latin-bold;
+				font-size: $font-size-normal;
+
+				.is-rtl & {
+					font-family: $arabic-bold;
+				}
+			}
+		}
+
+		.Info__Container {
+			bottom: calc(#{- $icons-size}/ 2);
+			display: flex;
+			justify-content: flex-end;
+			left: 0;
+			position: relative;
+			width: 100%;
+			z-index: 1;
+		}
+
+		.Exam__Container {
+			display: flex;
+			justify-content: space-between;
+
+			> div {
+				margin-right: $sapphire-sizes--medium;
+			}
+
+			.cardInfo {
+				height: auto;
+			}
+		}
+
+		.Info__Icons {
+			align-items: center;
+			background-color: $sapphire-white;
+			border-radius: 50%;
+			box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+			color: $regular-alpha;
+			display: flex;
+			font-size: $font-size-big;
+			height: $icons-size;
+			justify-content: center;
+			width: $icons-size;
+
+			&:nth-child(odd) {
+				margin: 0 $sapphire-sizes--medium;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

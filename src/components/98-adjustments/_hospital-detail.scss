@@ -1,0 +1,76 @@
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+@use '~Tools/card-profile-image' as *;
+
+[id*='HospitalDetailHeader'] {
+	.DetailHeader {
+		.section-title {
+			color: $sapphire-white;
+			font-size: $font-size-normal;
+
+			.Title__Container {
+				margin-bottom: $sapphire-sizes--xsmall;
+			}
+
+			.SubTitle__Container {
+				display: flex;
+				flex-direction: column;
+				font-family: $latin-regular;
+				font-size: $font-size-normal;
+
+				:nth-child(1) {
+					margin-bottom: $sapphire-sizes--small;
+				}
+
+				.is-rtl & {
+					font-family: $arabic-regular;
+				}
+			}
+		}
+	}
+}
+
+[id*='DoctorsSpeciality'] {
+	.section {
+		height: 100vh;
+		padding-bottom: $sapphire-sizes--xlarge;
+		padding-top: $sapphire-sizes--xlarge;
+
+		.section-title {
+			font-size: $font-size-heading3;
+			padding-bottom: $sapphire-sizes--medium;
+		}
+
+		.list-item {
+			padding: $sapphire-sizes--medium 0;
+		}
+
+		.card-profile {
+			display: flex;
+
+			.card-profile__image {
+				@include cardImageSize(56px);
+			}
+
+			.card-profile__content {
+				.card-profile__title__container {
+					.card-profile__title {
+						color: $dark-grey;
+						font-size: $font-size-heading4;
+					}
+				}
+
+				.card-profile__info {
+					color: $mid-light-grey;
+				}
+
+				.cardInfo__label,
+				.bio__title {
+					font-size: $font-size-heading2;
+				}
+			}
+		}
+	}
+}

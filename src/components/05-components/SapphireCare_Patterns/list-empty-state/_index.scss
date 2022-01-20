@@ -1,0 +1,59 @@
+/* ListEmptyState */
+
+@use '~/Settings/colors'as *;
+
+.list-empty-state {
+  background: $sapphire-white;
+  display: block;
+  padding: 20px;
+  position: relative;
+}
+
+.list-empty-state-title {
+  background: $light-grey;
+  background: linear-gradient(to right, $light-grey 0%, $sapphire-white 50%, $light-grey 100%);
+  display: inline-block;
+  height: 20px;
+  width: 20%;
+}
+
+.list-empty-state-list-content {
+  padding: 30px 0 50px;
+}
+
+@media (orientation: portrait) {
+  .list-empty-state--list-item {
+    position: relative;
+    width: 90%;
+  }
+}
+
+
+.list-empty-state--list-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.list-empty-state--list-item .list-item-content-left {
+  background: $light-grey;
+  border-radius: 100%;
+  display: inline-block !important;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.list-empty-state--list-item .list-item-content-title {
+  background: $light-grey;
+  background: linear-gradient(to right, $light-grey 0%, $sapphire-white 50%, $light-grey 100%);
+  display: block !important;
+  height: 20px;
+}
+
+.list-empty-state--list-item .list-item-content-text {
+  background: $light-grey;
+  background: linear-gradient(to right, $light-grey 0%, $sapphire-white 50%, $light-grey 100%);
+  display: inline-block !important;
+  height: 20px;
+  margin-top: 7px;
+  width: 50%;
+}
