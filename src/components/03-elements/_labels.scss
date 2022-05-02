@@ -1,0 +1,14 @@
+@use '~Settings/colors'as *;
+@use '~Settings/fonts'as *;
+@use '~Settings/sizes'as *;
+
+label{
+  color: $regular-grey;
+  font-size: $font-size-normal;
+}
+
+label .mandatoryField::after{
+  content: '*';
+  color: $regular-red;
+  margin-left: $sapphire-sizes--xsmall;
+}

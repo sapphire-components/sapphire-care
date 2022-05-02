@@ -76,6 +76,10 @@
 	font-size: 5em;
 }
 
+.sc.icon-6x {
+	font-size: 6em;
+}
+
 /* Icons */
 
 .sc-trophy:before {
@@ -488,4 +492,8 @@
 
 .sc-face-to-face:before {
 	content: '\e966';
+}
+
+.sc-care-logo:before {
+	content: '\e967';
 }

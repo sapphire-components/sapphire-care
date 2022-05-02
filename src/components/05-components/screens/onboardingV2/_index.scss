@@ -1,0 +1,69 @@
+@use '~Settings/colors'as *;
+@use '~Settings/sizes' as *;
+@use '~Settings/fonts' as *;
+
+.onboarding-page {
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  input:-internal-autofill-selected{
+    -webkit-box-shadow: none !important;
+    box-shadow: inset 0 0 0 1px $sapphire-white, inset 0 0 0 100px $sapphire-white !important;
+    -webkit-text-fill-color: $dark-grey !important;
+    font-size: $font-size-heading4;
+  }
+
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  input[type="date"]:empty{
+    color: transparent;
+  }
+
+  .header a,
+  .header a:link,
+  .header a:visited{
+    color: $regular-grey;
+    font-family: $latin-bold;
+    text-align: center;
+  }
+
+  .header .app-menu-icon{
+    color: $regular-alpha;
+  }
+
+  .wizard-wrapper{
+    border-radius: 3px;
+    margin:  0 auto;
+    overflow: hidden;
+    width: 70%;
+  }
+
+  .section-title{
+    margin-bottom: $sapphire-sizes--xlarge;
+    text-align: center;
+  }
+
+  .show-password{
+    padding: 0px !important;
+  }
+
+  .terms-conditions{
+    color: $regular-grey;
+    font-size: $font-size-normal;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-top: $sapphire-sizes--large;
+    text-align: center;
+
+    a{
+      font-size: $font-size-normal;
+      font-family: $latin-bold;
+    }
+  }
+}

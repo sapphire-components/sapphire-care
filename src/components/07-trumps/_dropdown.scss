@@ -1,9 +1,10 @@
 @use '~Settings/colors'as *;
+@use '~Settings/sizes'as *;
 
 [data-dropdown] > div.dropdown-display {
 	background: $sapphire-white;
 	border: 0;
-	color: $regular-grey;
+	color: $dark-grey;
 }
 
 [data-dropdown] > div.dropdown-display.dropdown-disabled {
@@ -12,8 +13,10 @@
 }
 
 [data-dropdown] > div.dropdown-display:after {
-	border-color: $regular-alpha;
-	/*primary-color*/
+	border-color: $regular-alpha; /*primary-color*/
+	border-width: 2px;
+	height: 10px;
+	width: 10px;
 }
 
 [data-dropdown] div.dropdown-popup-row {
@@ -40,4 +43,20 @@ div.dropdown-display.not-valid,
 div.button-group.not-valid > div {
 	border: 0;
 	border-bottom: 1px solid $regular-red;
+}
+
+.dropdown-container:after{
+	display: none;
+}
+
+.dropdown-small > div.dropdown-display{
+	padding: $sapphire-sizes--xsmall 0;
+}
+
+.dropdown-small > div.dropdown-display::after{
+	top: 18px;
+}
+
+.dropdown-border-bottom{
+	border-bottom:  1px solid #d3d3d3;
 }

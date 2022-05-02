@@ -1,20 +1,20 @@
 @use '~Settings/colors'as *;
 @use '~Settings/fonts'as *;
+@use '~Settings/sizes'as *;
 
 .animated-label,
 .animated-label.active,
 .animated-label:focus {
-	margin-bottom: 15px;
+	margin-bottom: $sapphire-sizes--large;
 
 	.animated-label-text {
-		all: unset;
+		color: unset;
 		display: flex;
 		font-size: $font-size-normal;
-		margin-bottom: 7px;
 
 		.form-input__asterisk {
 			color: $regular-red;
-			margin-left: 5px;
+			margin-left: $sapphire-sizes--xsmall;
 		}
 
 		.form-input__label,
@@ -33,11 +33,7 @@
 	.animated-label-input input[data-input],
 	&:empty {
 		color: $dark-grey;
-		font-size: $font-size-heading4;
-		height: 50px;
-		line-height: 20px;
-		margin: 0;
-		padding: 0;
+		//font-size: $font-size-heading3;
 	}
 }
 
@@ -46,28 +42,29 @@
 		.animated-label-text {
 			color: $regular-grey;
 			font-size: $font-size-normal;
-			position: relative;
-			top: 10px;
+			//position: relative;
+			//top: 10px;
 		}
 	}
 
 	.animated-label-text {
-		bottom: -25px;
-		font-size: $font-size-heading3;
-		position: relative;
+		//bottom: -30px;
+		font-size: $font-size-heading4;
+		//position: relative;
 		transition: font-size 0.5s ease;
+		z-index: 1;
 	}
 
 	&.active {
 		.animated-label-text {
-			bottom: 0;
+			top: -3px;
 			color: $regular-grey;
 			font-size: $font-size-normal;
 			transition: font-size 0.5s ease;
 		}
 
-		// .animated-label-input {
-		//   color: $dark-grey;
-		// }
+		.animated-label-input {
+			color: $dark-grey;
+		}
 	}
 }

@@ -1,0 +1,15 @@
+@use '~Settings/colors'as *;
+@use '~Settings/fonts'as *;
+
+.icon-circle{
+    background-color: $body-grey;
+    border-radius: 50%;
+    height: 184px;
+    text-align: center;
+    width: 184px;
+
+    i{
+        line-height: 184px;
+        color: $regular-alpha;
+    }
+}

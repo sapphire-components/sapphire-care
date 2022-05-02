@@ -21,6 +21,14 @@
 	.margin-top-#{$label} {
 		margin-top: #{$value};
 	}
+
+	.margin-left-#{$label} {
+		margin-left: #{$value};
+	}
+
+	.margin-right-#{$label} {
+		margin-right: #{$value};
+	}
 }
 
 /* Paddings */
@@ -43,5 +51,13 @@
 
 	.padding-top-#{$label} {
 		padding-top: #{$value};
+	}
+
+	.padding-left-#{$label} {
+		padding-left: #{$value};
+	}
+
+	.padding-right-#{$label} {
+		padding-right: #{$value};
 	}
 }

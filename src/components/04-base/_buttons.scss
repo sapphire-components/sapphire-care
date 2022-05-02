@@ -210,6 +210,18 @@
 	color: $sapphire-white;
 }
 
+/* button: enormous | active | disabled */
+.btn-enormous,
+.btn-enormous:active,
+.btn-enormous:hover,
+.btn-enormous:visited{
+  height: 67px;
+  border-color: $light-grey;
+  border-radius: 4px;
+  background-color: $sapphire-white;
+  color: $dark-grey;
+}
+
 /*button: small */
 .btn-small,
 .btn-small:hover,
