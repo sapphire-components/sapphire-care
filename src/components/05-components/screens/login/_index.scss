@@ -2,6 +2,7 @@
 
 @use '~Settings/colors'as *;
 @use '~Settings/fonts'as *;
+@use '~Settings/sizes'as *;
 
 [id*='Login_Page'] {
 	color: $sapphire-white;
@@ -130,6 +131,10 @@
 					color: $regular-white;
 				}
 			}
+		}
+
+		a:active {
+			--webkit-filter: inherit;
 		}
 	}
 }

@@ -4,6 +4,10 @@
 
 .onboarding-page {
   
+  a:active {
+    --webkit-filter: inherit;
+  }
+
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
@@ -25,23 +29,20 @@
     color: transparent;
   }
 
-  .header a,
-  .header a:link,
-  .header a:visited{
-    color: $regular-grey;
-    font-family: $latin-bold;
-    text-align: center;
-  }
+  .header{
+    background-color: $sapphire-white;
 
-  .header .app-menu-icon{
-    color: $regular-alpha;
-  }
+    a,
+    a:link,
+    a:visited{
+      color: $regular-alpha;
+      font-family: $latin-bold;
+      text-align: center;
+    }
 
-  .wizard-wrapper{
-    border-radius: 3px;
-    margin:  0 auto;
-    overflow: hidden;
-    width: 70%;
+    .app-menu-icon{
+      color: $regular-alpha;
+    }
   }
 
   .section-title{

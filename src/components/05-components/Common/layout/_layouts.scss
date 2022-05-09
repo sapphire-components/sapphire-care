@@ -1,20 +1,32 @@
 @use '~Settings/colors'as *;
 
+.layout.blank{
+  .header{
+    background-color: $sapphire-white;
+  }
+  
+  .wizard-wrapper{
+    border-radius: 3px;
+    margin:  0 auto;
+    overflow: hidden;
+    width: 70%;
+  }
 
+  &.bg-colored .content {
+    background: $regular-alpha;
+    /*primary-color*/
+    color: $sapphire-white;
 
-
-.layout.blank.bg-colored .content {
-  background: $regular-alpha;
-  /*primary-color*/
-  color: $sapphire-white;
+    .header{
+      background-color: $regular-alpha;
+    }
+  }
 }
-
 .layout.white-page .header {
   background: $sapphire-white;
   color: $regular-alpha;
   /*primary-color*/
 }
-
 .layout.white-page .content,
 .layout.white-content .content,
 .layout.white-content .bottom {
