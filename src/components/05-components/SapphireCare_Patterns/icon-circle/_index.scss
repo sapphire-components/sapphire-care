@@ -1,15 +1,29 @@
 @use '~Settings/colors'as *;
 @use '~Settings/fonts'as *;
 
+$circle-size-medium: 116px;
+$circle-size-large: 184px;
+
 .icon-circle{
+    align-content: center;
+    align-items: center;
     background-color: $body-grey;
     border-radius: 50%;
-    height: 184px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: $circle-size-medium;
+    justify-content: center;
+    margin: auto;
     text-align: center;
-    width: 184px;
+    width: $circle-size-medium;
+
+    &.icon-circle-large{
+        height: $circle-size-large;
+        width: $circle-size-large;
+    }
 
     i{
-        line-height: 184px;
         color: $regular-alpha;
     }
 }

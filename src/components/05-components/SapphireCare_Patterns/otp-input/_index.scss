@@ -1,0 +1,31 @@
+@use '~Settings/borders' as *;
+@use '~Settings/colors' as *;
+@use '~Settings/fonts' as *;
+@use '~Settings/sizes' as *;
+
+.otp-wrapper {
+  .list{
+    display: flex;
+    justify-content: center;
+
+    .input-number {
+      height: 59px;
+      width: 49px;
+      border: 2px solid $regular-alpha;
+      border-radius: 4px;
+      margin: 0 $sapphire-sizes--small;
+
+      input {
+        border: none;
+        height: 54px;
+        font-size: 38px;
+        text-align: center;
+      }
+    }
+  }
+  &.otp-error{
+    .input-number {
+      border-color: $sapphire-care-red;
+    }
+  }
+}

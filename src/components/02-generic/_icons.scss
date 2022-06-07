@@ -68,10 +68,6 @@
 	font-size: 4.214em;
 }
 
-.sc.extra3-large {
-	font-size: 4.214em;
-}
-
 .sc.icon-5x {
 	font-size: 5em;
 }
@@ -496,4 +492,8 @@
 
 .sc-care-logo:before {
 	content: '\e967';
+}
+
+.sc-warning:before {
+	content: '\e968';
 }

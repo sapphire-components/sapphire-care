@@ -2,6 +2,8 @@
 @use '~Settings/sizes' as *;
 @use '~Settings/fonts' as *;
 
+$mobile-input-width: 85px;
+
 .onboarding-page {
   
   a:active {
@@ -42,6 +44,62 @@
 
     .app-menu-icon{
       color: $regular-alpha;
+    }
+  }
+
+  .mobile-with-flag {
+    align-items: center;
+    display: flex;
+
+    >div {
+      width: 100%;
+
+      .animated-label {
+
+        .flag {
+          align-items: center;
+          bottom: 3px;
+          display: none;
+          position: absolute;
+
+          .flag-img {
+            margin-right: 5px;
+            width: 50px;
+
+            .is-rtl & {
+              margin-left: 5px;
+            }
+
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+
+          .phone-country-code{
+            font-size: 18px;
+            color: $mid-light-grey;
+          }
+        }
+
+        &.active {
+          
+          .flag {
+            display: flex;
+
+            .is-rtl & {
+              left: -20px;
+              position: absolute;
+            }
+          }
+
+          input[type='tel'] {
+            padding-left: $mobile-input-width;
+            position: relative;
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
 
