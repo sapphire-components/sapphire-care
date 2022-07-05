@@ -64,6 +64,10 @@
 	font-size: 2.571em;
 }
 
+.sc.icon-3x {
+  font-size: 3em;
+}
+
 .sc.extra3-large {
 	font-size: 4.214em;
 }
@@ -74,6 +78,12 @@
 
 .sc.icon-6x {
 	font-size: 6em;
+}
+
+/* Icons Colors*/
+.sc-red,
+.icon-circle i.sc-red{
+	color: $regular-red;
 }
 
 /* Icons */
@@ -494,6 +504,10 @@
 	content: '\e967';
 }
 
-.sc-warning:before {
+.sc-faceid:before {
 	content: '\e968';
+}
+
+.sc-warning:before {
+	content: '\e969';
 }
