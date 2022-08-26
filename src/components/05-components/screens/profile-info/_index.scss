@@ -1,0 +1,65 @@
+@use '~Settings/colors'as *;
+@use '~Settings/sizes' as *;
+@use '~Settings/fonts' as *;
+
+$mobile-input-padding-left: 75px;
+
+.patient-profile-info-edit{
+  .mobile-with-flag.patient-profile-edit {
+    align-items: center;
+    display: flex;
+
+    >div {
+      width: 100%;
+
+      .animated-label {
+
+        .flag {
+          align-items: center;
+          bottom: 6px;
+          display: none;
+          position: absolute;
+
+          .flag-img {
+            margin-right: 5px;
+            width: 50px;
+
+            .is-rtl & {
+              margin-left: 5px;
+            }
+
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+
+          .phone-country-code{
+            color: $mid-light-grey;
+          }
+        }
+
+        &.active {
+          
+          .flag {
+            display:  flex;
+
+            .is-rtl & {
+              left: -20px;
+              position: absolute;
+            }
+          }
+
+          input[type='tel'] {
+            padding-left: $mobile-input-padding-left;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  [id*=NotificationPreferences] .form-input__input {
+    padding: $sapphire-sizes--medium $sapphire-sizes--none $sapphire-sizes--small;
+  }
+}

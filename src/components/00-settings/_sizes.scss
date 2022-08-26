@@ -1,4 +1,5 @@
 $sapphire-sizes: (
+	'none': '0px',
 	'xxsmall': '2px',
 	'xsmall': '4px',
 	'small': '8px',
@@ -9,6 +10,7 @@ $sapphire-sizes: (
 	'largest': '56px',
 );
 
+$sapphire-sizes--none: 0px;
 $sapphire-sizes--xxsmall: 2px;
 $sapphire-sizes--xsmall: 4px;
 $sapphire-sizes--small: 8px;

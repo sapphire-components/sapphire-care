@@ -1,12 +1,18 @@
 // Colors
 
-//$regular-alpha: #00bfa5; //comment this line to generate css for the Kuwait Hospital
-$regular-alpha: #45AAFF; //uncomment this line to generate css for the Kuwait Hospital
-$regular-beta: darken($regular-alpha, 4%);
+// New Theme Colors - INI (comment these lines to generate css for the Blue Theme)
+$regular-alpha: #00bfa5;
+$sapphire-primary-blue: #0e4f7c;
+// New Theme Colors - END
 
-//$sapphire-care-blue1: #0e4f7c;
-$sapphire-care-blue1: #222A5F; //uncomment this line to generate css for the Kuwait Hospital
-$sapphire-care-blue2: #255a80;
+// Blue Theme Colors - INI (uncomment these lines to generate css for the Blue Theme)
+//$regular-alpha: #45AAFF; 
+//$sapphire-primary-blue: #222A5F;
+// Blue Theme Colors - END
+
+$sapphire-care-secondary-blue: #255a80;
+
+$regular-beta: darken($regular-alpha, 4%);
 
 $dark-blue: #194968;
 $dark-grey: #333333;
