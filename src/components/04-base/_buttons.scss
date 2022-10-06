@@ -278,6 +278,12 @@ a.btn.select-date > div > div {
 	color: $sapphire-white;
 }
 
+.layout.blank.bg-colored .btn.btn-second,
+.layout.blank.bg-colored .btn:hover.btn-second,
+.layout.blank.bg-colored .btn:focus.btn-second{
+	color: $regular-alpha;
+}
+
 .layout.blank.bg-colored .btn:active {
 	border-color: $regular-beta;
 }
